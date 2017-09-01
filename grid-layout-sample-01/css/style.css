@@ -1,7 +1,14 @@
 /* 見た目調整 */
+body {
+  /* フォントの種類を指定 */
+  font-family: -apple-system, BlinkMacSystemFont, 游ゴシック, "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+  /* 字間(プロポーショナルメトリクス)を指定 */
+  font-feature-settings: "palt";
+}
+
 .container {
-  color: #95989A;
-  font-size: 26px;
+  color: #ecf0f1;
+  font-size: 2.0rem;
 }
 
 .container > * {
@@ -9,24 +16,24 @@
 }
 
 .header {
-  background-color: #B1EA8D;
+  background-color: #2ecc71;
 }
 
 .main {
-  background-color: #A9E6F8;
+  background-color: #3498db;
   height: 300px;
 }
 
 .aside {
-  background-color: #FCF896;
+  background-color: #f1c40f;
 }
 
 .nav {
-  background-color: #FCB6D1;
+  background-color: #e74c3c;
 }
 
 .footer {
-  background-color: #DCBBED;
+  background-color: #9b59b6;
 }
 
 /* ====================
