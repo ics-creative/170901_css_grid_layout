@@ -1,5 +1,3 @@
-/.idea/170901_css_grid_layout.iml
-/.idea/markdown-navigator/profiles_settings.xml
-/.idea/modules.xml
-/.idea/vcs.xml
-/.idea/workspace.xml
+/.idea
+.DS_Store
+Thumbs.db
