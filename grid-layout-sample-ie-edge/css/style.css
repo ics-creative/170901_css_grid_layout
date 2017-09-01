@@ -1,0 +1,101 @@
+/* 見た目調整 */
+.container {
+  color: #95989A;
+  font-size: 26px;
+}
+
+.container > * {
+  padding: 10px;
+}
+
+.header {
+  background-color: #B1EA8D;
+}
+
+.main {
+  background-color: #A9E6F8;
+  height: 300px;
+}
+
+.aside {
+  background-color: #FCF896;
+}
+
+.nav {
+  background-color: #FCB6D1;
+}
+
+.footer {
+  background-color: #DCBBED;
+}
+
+/* ====================
+  グリッドコンテナ
+==================== */
+.container {
+  display: grid;
+  /* 1列目から順番に180px、1fr、160pxの幅 */
+  grid-template-columns: 180px 1fr 160px;
+  /* 1行目から順番に行の高さを60px 1fr 90pxにする */
+  grid-template-rows: 60px 1fr 90px;
+  /* IE/Edge用 */
+  display: -ms-grid;
+  -ms-grid-columns: 180px 1fr 160px;
+  -ms-grid-rows: 60px 1fr 90px;
+}
+
+/* ====================
+  グリッドアイテム
+==================== */
+.header {
+  /* 列の1本目から4本目のグリッドラインまで */
+  grid-column: 1 / 4;
+  /* 行の1本目から2本目のグリッドラインまで */
+  grid-row: 1;
+  /* IE/Edge用 */
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  -ms-grid-row: 1;
+}
+
+.main {
+  /* 列の2本目から3本目のグリッドラインまで */
+  grid-column: 2 / 3;
+  /* 行の2本目から3本目のグリッドラインまで */
+  grid-row: 2;
+  /* IE/Edge用 (main要素はIEで未サポートのため、display:block を指定) */
+  display: block;
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+}
+
+.aside {
+  /* 列の2本目から3本目のグリッドラインまで */
+  grid-column: 1 / 2;
+  /* 行の2本目から3本目のグリッドラインまで */
+  grid-row: 2;
+  /* IE/Edge用 */
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
+}
+
+.nav {
+  /* 列の3本目から4本目のグリッドラインまで */
+  grid-column: 3 / 4;
+  /* 行の2本目から3本目のグリッドラインまで */
+  grid-row: 2;
+  /* IE/Edge用 */
+  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+}
+
+.footer {
+  /* 列の1本目から4本目のグリッドラインまで */
+  grid-column: 1 / 4;
+  /* 行の2本目から3本目のグリッドラインまで */
+  grid-row: 3;
+  /* IE/Edge用 */
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  -ms-grid-row: 3;
+}
