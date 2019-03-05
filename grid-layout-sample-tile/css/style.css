@@ -26,6 +26,6 @@ p {
   display: grid;
   /* 最小100px、最大1frの列を繰り返しつくる */
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
 }
