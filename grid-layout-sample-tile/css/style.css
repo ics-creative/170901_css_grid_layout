@@ -10,11 +10,11 @@ p {
 }
 
 .container {
-  background-color: #f1c40f;
+  background-color: #eee;
 }
 
 .container > div {
-  background-color: #2ecc71;
+  background-color: #ccc;
   padding: 10px;
   height: 80px;
 }
@@ -24,6 +24,7 @@ p {
   display: grid;
   /* 最小100px、最大1frの列を繰り返しつくる */
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  /* 余白 */
   column-gap: 10px;
   row-gap: 10px;
 }

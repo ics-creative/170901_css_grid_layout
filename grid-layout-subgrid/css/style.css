@@ -1,0 +1,54 @@
+/* 見た目調整用 */
+body {
+  /* フォントの種類を指定 */
+  font-family: sans-serif;
+  color: #666;
+}
+
+
+.container {
+  background-color: #f0f0f0;
+}
+
+.container > div {
+  background-color: #ddd;
+}
+
+/* ----------------------------------------- */
+/* Subgrid */
+/* ----------------------------------------- */
+
+.container {
+  /* グリッドコンテナ */
+  display: grid;
+  /* 最小256px、最大1frの列を繰り返しつくる */
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  /* 余白 */
+  gap: 16px;
+}
+
+.item {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+}
+
+/* ----------------------------------------- */
+/* 以下はただの装飾 */
+/* ----------------------------------------- */
+.item_title {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.item_desc {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+
+.item_thumb img {
+  width: 100%;
+  height: auto;
+}
