@@ -1,0 +1,85 @@
+/* 見た目調整 */
+body {
+  /* フォントの種類を指定 */
+  font-family: sans-serif;
+  color: #666;
+}
+
+.container > a {
+  padding: 10px;
+}
+
+.item__green {
+  background-color: #2ecc71;
+}
+
+.item__pink {
+  background-color: #ef71b5;
+}
+
+.item__blue {
+  background-color: #3498db;
+}
+
+.item__purple {
+  background-color: #9b59b6;
+}
+
+.item_title {
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* ====================
+  グリッドコンテナ
+==================== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px;
+  transition: grid-template 0.8s ease;
+  overflow: hidden;
+
+  /* 列の幅を変更する */
+  /* 5fr: ホバーされたアイテムは広めに（5/8エリア分) */
+  /* 1fr: ホバーされたアイテム以外はサイズ変更しない */
+  &:has(> .item:nth-child(1):hover){
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+  }
+  &:has(> .item:nth-child(2):hover){
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+  }
+  &:has(> .item:nth-child(3):hover){
+    grid-template-columns: 1fr 1fr 5fr 1fr;
+  }
+  &:has(> .item:nth-child(4):hover){
+    grid-template-columns: 1fr 1fr 1fr 5fr;
+  }
+
+  /* 行の高さを変更する */
+  &:has(> .item:hover){
+    grid-template-rows: 280px;
+  }
+
+  /* ホバーされたアイテム以外は半透明で表示 */
+  &:has(.item:hover) .item:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+/* ====================
+  グリッドアイテム
+==================== */
+.item{
+  min-width: 60px;
+  color: #ecf0f1;
+  text-underline-offset: 4px;
+  font-size: 1.2rem;
+  text-align: center;
+  overflow: hidden;
+  transition: opacity 0.8s;
+
+  img {
+    mix-blend-mode: lighten;
+  }
+}
